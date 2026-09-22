@@ -19,6 +19,10 @@
 
 两份文件保留相同的完整候选池、表格、参数、覆盖缺口和可点击来源链接；PDF 不是摘要节选。
 
+### 样例报告
+
+可直接查看对“LLM 上下文压缩”的一次完整调研输出：[Markdown](examples/context-compression-report.md) / [PDF](examples/context-compression-report.pdf)。
+
 ### 安装
 
 克隆本仓库后，将该 Skill 目录复制到 Codex 的本地 skills 目录：
