@@ -2,6 +2,10 @@
 
 Use only the sections that help answer the request. Do not force a template when a brief response is more useful.
 
+## Dual-format delivery
+
+For a requested research report, write the Markdown version first and use it as the source of truth for the PDF. Both files must contain the same complete result set and direct source links; the PDF is not a short preview. Use a shared basename such as `llm-context-compression-report.md` and `llm-context-compression-report.pdf`.
+
 ## Landscape brief
 
 ```markdown

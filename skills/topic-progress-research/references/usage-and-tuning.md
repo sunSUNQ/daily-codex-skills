@@ -2,7 +2,7 @@
 
 ## Quick start
 
-In Codex, invoke `$topic-progress-research` and state the topic. The skill returns a published-paper candidate pool, paper-linked code and experiment fields in the same rows, a separately ranked open-source project list, and a clearly separated community/technical-media signal summary.
+In Codex, invoke `$topic-progress-research` and state the topic. For a research report, it produces two synchronized deliverables: an editable Markdown report and a PDF report with the same complete content and clickable source links. The report contains a published-paper candidate pool, paper-linked code and experiment fields in the same rows, a separately ranked open-source project list, and a clearly separated community/technical-media signal summary.
 
 Example:
 
@@ -45,4 +45,5 @@ To change the published default for all future runs, edit the values in the `## 
 - Code, training, evaluation, data, weights, and configuration artifacts are attached to the corresponding paper row. Unverified associations remain blank.
 - Open-source projects state their canonical platform. GitHub stars, forks, license, and activity are point-in-time metadata, not quality scores.
 - Community/technical-media sources are presented in their own table with a direct article link, platform, date, neutral summary, and caveat. The search covers broad, engineering/workflow, and Chinese platform-directed queries, and expands with leading method/tool names. Search engines are used to discover pages; their snippets are not treated as evidence.
+- Formal reports are delivered as both `.md` and `.pdf` files with a shared basename. Markdown is the editable source of truth; the PDF contains the full result set rather than a shortened excerpt.
 - High-recall output is a screening set, not a claim of completeness.

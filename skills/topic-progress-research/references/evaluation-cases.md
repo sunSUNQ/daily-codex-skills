@@ -73,3 +73,17 @@ Pass criteria:
 - Returns up to 20 deduplicated, underlying-article links in a third source table rather than stopping at a small handful of obvious posts.
 - Labels each item with its platform/type, date when visible, a neutral summary, and caveat.
 - Does not treat a search-result snippet, repost, or community opinion as primary evidence for paper or code claims.
+
+## 6. Dual-format report
+
+Prompt:
+
+```text
+Create a research report on LLM context compression.
+```
+
+Pass criteria:
+
+- Produces a Markdown and a PDF report with the same stable basename.
+- Markdown is complete and editable; PDF preserves the complete candidate tables and direct links rather than using an excerpt.
+- The PDF is rendered and inspected before delivery.

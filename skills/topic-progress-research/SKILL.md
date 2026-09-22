@@ -34,6 +34,15 @@ Accept parameters stated naturally or as `key=value`. Defaults apply only when t
 
 Use the user's exact dates or calendar-year request when supplied. State the effective settings near the start of the report. Read [usage and tuning](references/usage-and-tuning.md) when the user asks how to invoke or configure the skill; read [evaluation cases](references/evaluation-cases.md) before publishing or materially changing this skill.
 
+## Report deliverables
+
+When the user asks for a research report, deliver two synchronized files by default:
+
+1. a Markdown (`.md`) report as the canonical, editable, link-rich record;
+2. a PDF (`.pdf`) report for reading and sharing.
+
+Write and verify the Markdown first. Generate the PDF from that same content: preserve the report title, effective parameters, query map, all result tables, source links, caveats, and coverage gaps. Do not use a shortened PDF excerpt when the Markdown contains the full candidate pool. Give both files the same stable basename, place them together in the user-facing output directory, and state that the source links remain clickable in both. Render and inspect the PDF before delivery. If the user explicitly asks for only one format, honor that request; otherwise do not substitute a chat-only summary for either artifact.
+
 ## Topic expansion
 
 Before selecting venues or papers, turn the user's topic into a small, auditable query map. Preserve the original wording as the core term, then add only semantically close terms in these groups:
@@ -105,7 +114,7 @@ End with:
 - notable gaps and open questions;
 - practical next steps appropriate to the user's goal, such as papers to read, repositories to evaluate, or experiments to run.
 
-Use the reporting structures in [references/reporting-templates.md](references/reporting-templates.md) when the user asks for a formal report, a recurring update, or a comparative shortlist.
+Use the reporting structures in [references/reporting-templates.md](references/reporting-templates.md) when the user asks for a formal report, a recurring update, or a comparative shortlist. For formal reports, use the same structure in both the Markdown and PDF deliverables.
 
 ## Freshness and attribution
 
