@@ -58,3 +58,18 @@ Pass criteria:
 - Retains papers that have no located implementation.
 - Leaves the corresponding repository, association, artifact role, and metrics cells blank.
 - Does not substitute a similarly named or third-party project without marking its association.
+
+## 5. High-recall community coverage
+
+Prompt:
+
+```text
+Research LLM context compression; community_sources=true; max_community_sources=20.
+```
+
+Pass criteria:
+
+- Runs broad topic, engineering/workflow, and Chinese platform-directed discovery queries, and expands with method or project names.
+- Returns up to 20 deduplicated, underlying-article links in a third source table rather than stopping at a small handful of obvious posts.
+- Labels each item with its platform/type, date when visible, a neutral summary, and caveat.
+- Does not treat a search-result snippet, repost, or community opinion as primary evidence for paper or code claims.

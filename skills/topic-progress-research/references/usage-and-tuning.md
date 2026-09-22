@@ -20,7 +20,7 @@ Use $topic-progress-research to research vulnerability impact-range identificati
 | `published_only` | true | Exclude preprints and submissions; label Findings and workshops separately. |
 | `include_close` | true | Keep direct, close, and adjacent candidates for manual filtering. |
 | `community_sources` | true | Add a third, separate source class for technical blogs, Zhihu, public WeChat articles, and other community signals. |
-| `max_community_sources` | 10 | Cap the deduplicated community source table. |
+| `max_community_sources` | 20 | Cap the deduplicated community source table. The default favors recall for later manual screening. |
 
 ## Override examples
 
@@ -33,7 +33,7 @@ Research context compression; paper_years=10; max_projects=30.
 
 Research RAG compression for calendar years 2020-2025; published_only=true; include_close=false.
 
-Research context compression; community_sources=true; max_community_sources=15.
+Research context compression; community_sources=true; max_community_sources=30.
 ```
 
 To change the published default for all future runs, edit the values in the `## Request parameters` table in `SKILL.md`. Ordinary users should prefer per-request overrides so the shared skill remains predictable.
@@ -44,5 +44,5 @@ To change the published default for all future runs, edit the values in the `## 
 - CCF grades are reported only from an identified CCF source; an absent grade is left as unknown.
 - Code, training, evaluation, data, weights, and configuration artifacts are attached to the corresponding paper row. Unverified associations remain blank.
 - Open-source projects state their canonical platform. GitHub stars, forks, license, and activity are point-in-time metadata, not quality scores.
-- Community/technical-media sources are presented in their own table with a direct article link, platform, date, neutral summary, and caveat. Search engines are used to discover pages; their snippets are not treated as evidence.
+- Community/technical-media sources are presented in their own table with a direct article link, platform, date, neutral summary, and caveat. The search covers broad, engineering/workflow, and Chinese platform-directed queries, and expands with leading method/tool names. Search engines are used to discover pages; their snippets are not treated as evidence.
 - High-recall output is a screening set, not a claim of completeness.
