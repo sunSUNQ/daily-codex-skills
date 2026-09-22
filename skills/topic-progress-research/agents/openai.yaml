@@ -1,0 +1,4 @@
+interface:
+  display_name: "Topic Progress Research"
+  short_description: "Research papers projects and emerging trends"
+  default_prompt: "Use $topic-progress-research to research recent progress in a topic, including papers and open-source projects."
